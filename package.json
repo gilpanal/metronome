@@ -1,0 +1,24 @@
+{
+  "name": "metronome",
+  "version": "1.0.0",
+  "description": "A simple metronome written using Javascript and the Web Audio API.",
+  "main": "metronome.js",
+  "scripts": {
+    "prepare":"rm -rf .parcel-cache",
+    "dev": "npm run prepare && parcel --no-cache src/*.html --https"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grantjames/metronome.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grantjames/metronome/issues"
+  },
+  "homepage": "https://github.com/grantjames/metronome#readme",
+  "dependencies": {
+    "parcel": "^2.12.0"
+  }
+}

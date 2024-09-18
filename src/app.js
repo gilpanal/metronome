@@ -1,5 +1,8 @@
+import Metronome from './metronome'
 var metronome = new Metronome();
+metronome.init()
 var tempo = document.getElementById('tempo');
+console.log(metronome.tempo)
 tempo.textContent = metronome.tempo;
 
 var playPauseIcon = document.getElementById('play-pause-icon');
