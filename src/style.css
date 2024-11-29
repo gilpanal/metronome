@@ -1,95 +1,37 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  background-color: #1e2227;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column;
-
-  height: 100%;
-
-  font-family: Arial, sans-serif;
+.metronome-button {
+  padding: 6px;
+  border: none;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #2a4949;
   color: #e9e9e9;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-#play-button {
-  width: 150px;
-  height: 150px;
-
+.play-pause-metronome-button {
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
 }
 
-.title {
-  margin-bottom: 40px;
-  font-size: 40px;
-  text-align: center;
-}
-
-#tempo {
-  font-size: 60px;
-}
-
-#accent {
-  font-size: 60px;
-  text-align: center;
-}
-
-#swing {
-  font-size: 60px;
-  text-align: center;
-}
-
-#bar {
-  font-size: 60px;
-  text-align: center;
-}
-
-.bpm {
+.number-metronome {
   font-size: 30px;
   text-align: center;
 }
 
-.tempo-controls {
-  margin-top: 30px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row;
+.subtext-metronome {
+  font-size: 20px;
+  text-align: center;
 }
 
-.accent-controls {
+.metronome-controls {
   margin-top: 30px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row;
-}
-
-.swing-controls {
-  margin-top: 30px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row;
-}
-
-.bar-controls {
-  margin-top: 30px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,35 +42,7 @@ body {
   margin: 0 15px;
 }
 
-button {
-  padding: 6px;
-  border: none;
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  margin: 5px;
-  background-color: #2a4949;
-  color: #e9e9e9;
-  cursor: pointer;
-}
-
-button:focus {
-  outline: none;
-}
-
-.created-by {
-  margin-top: 40px;
-}
-
-a {
-  color: #e9e9e9;
-}
-
-a:hover {
-  color: #356161;
-}
-
-.play {
+.play-icon {
   width: 0;
   height: 0;
   border-top: 30px solid transparent;
@@ -137,7 +51,7 @@ a:hover {
   margin-left: 15px;
 }
 
-.pause {
+.pause-icon {
   width: 15px;
   height: 60px;
   border: none;

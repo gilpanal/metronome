@@ -1,62 +1,62 @@
 import Metronome from './metronome'
-var metronome = new Metronome();
-//metronome.init()
-var tempo = document.getElementById('tempo');
-console.log(metronome.tempo)
-tempo.textContent = metronome.tempo;
+const metronome = new Metronome()
 
-var accent = document.getElementById('accent');
-accent.textContent = metronome.accent;
+const tempo = document.getElementById('tempo')
 
-var swing = document.getElementById('swing');
-swing.textContent = metronome.swing;
+tempo.textContent = metronome.tempo
 
-var bar = document.getElementById('bar');
-bar.textContent = metronome.barLength;
+const accent = document.getElementById('accent')
+accent.textContent = metronome.accent
 
-var playPauseIcon = document.getElementById('play-pause-icon');
+const swing = document.getElementById('swing')
+swing.textContent = metronome.swing
 
-var playButton = document.getElementById('play-button');
+const bar = document.getElementById('bar')
+bar.textContent = metronome.barLength
+
+const playPauseIcon = document.getElementById('play-pause-icon')
+
+const playButton = document.getElementById('play-button')
 playButton.addEventListener('click', function() {
-    metronome.startStop();
-
+    metronome.startStop()
     if (metronome.isRunning) {
-        playPauseIcon.className = 'pause';
+        playPauseIcon.className = 'pause-icon'
     }
     else {
-        playPauseIcon.className = 'play';
+        playPauseIcon.className = 'play-icon'
     }
+})
 
-});
-
-var tempoChangeButtons = document.getElementsByClassName('tempo-change');
-for (var i = 0; i < tempoChangeButtons.length; i++) {
+const tempoChangeButtons = document.querySelectorAll(`[data-id='tempo-change']`)
+for (let i = 0; i < tempoChangeButtons.length; i++) {
     tempoChangeButtons[i].addEventListener('click', function() {
-        metronome.tempo += parseInt(this.dataset.change);
-        tempo.textContent = metronome.tempo;
-    });
+        metronome.tempo += parseInt(this.dataset.change)
+        tempo.textContent = metronome.tempo
+    })
 }
 
-var accentChangeButtons = document.getElementsByClassName('accent-change');
-for (var i = 0; i < accentChangeButtons.length; i++) {
+const accentChangeButtons = document.querySelectorAll(`[data-id='accent-change']`)
+for (let i = 0; i < accentChangeButtons.length; i++) {
     accentChangeButtons[i].addEventListener('click', function() {
-        metronome.accent += parseInt(this.dataset.change);
-        accent.textContent = metronome.accent;
-    });
+        metronome.accent += parseInt(this.dataset.change)
+        accent.textContent = metronome.accent
+    })
 }
 
-var swingChangeButtons = document.getElementsByClassName('swing-change');
-for (var i = 0; i < swingChangeButtons.length; i++) {
+const swingChangeButtons = document.querySelectorAll(`[data-id='swing-change']`)
+for (let i = 0; i < swingChangeButtons.length; i++) {
     swingChangeButtons[i].addEventListener('click', function() {
-        metronome.swing += parseInt(this.dataset.change);
-        swing.textContent = metronome.swing;
-    });
+        metronome.swing += parseInt(this.dataset.change)
+        swing.textContent = metronome.swing
+    })
 }
 
-var barChangeButtons = document.getElementsByClassName('bar-change');
-for (var i = 0; i < barChangeButtons.length; i++) {
+const barChangeButtons = document.querySelectorAll(`[data-id='bar-change']`)
+for (let i = 0; i < barChangeButtons.length; i++) {
     barChangeButtons[i].addEventListener('click', function() {
-        metronome.barLength += parseInt(this.dataset.change);
-        bar.textContent = metronome.barLength;
-    });
+        metronome.barLength += parseInt(this.dataset.change)
+        bar.textContent = metronome.barLength
+    })
 }
+
+metronome.init()
