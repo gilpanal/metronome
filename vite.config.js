@@ -5,6 +5,7 @@ export default {
   build: {
     outDir: '../dist'
   },
+  base: "/metronome/",
   server: {
     port: 8080
   }

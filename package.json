@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "A simple metronome written using Javascript and the Web Audio API.",
   "scripts": {
-    "start":"vite"
+    "start": "vite",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,7 @@
   },
   "homepage": "https://github.com/gilpanal/metronome#readme",
   "devDependencies": {
+    "gh-pages": "^6.2.0",
     "vite": "^6.0.3"
   }
 }
