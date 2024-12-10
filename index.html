@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Metronome</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/d6bd427cae.js" crossorigin="anonymous"></script>
+  <script type="module" crossorigin src="/assets/index-xxt_sJEu.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Cx0OhQDl.css">
+</head>
+
+<body>
+    <main class="container py-4 px-3 mx-auto">
+        <header class="title">
+            <i class='fas fa-music'></i>&nbsp;&nbsp;
+            <span>Metronome</span>
+            <i id='metronome-fonticon' class='fas fa-square'>&nbsp;</i>
+        </header>       
+        <div class='metronome-controls'>
+            <div class='metronome-switch custom-control custom-switch'>
+                <input type='checkbox' class='custom-control-input' id='metronomeSwitch'>
+                <label class='custom-control-label' for='metronomeSwitch'>Activate</label>
+            </div>
+        </div>
+        <div class='metronome-controls'>
+            <button id='play-button' type='button' class='btn metronome-button play-pause-metronome-button btn-success'>
+                <div id='play-pause-icon' class='play-metronome-icon'></div>
+            </button>
+        </div>
+        <div class='metronome-controls'>
+
+            <button data-id='tempo-change' type='button' class='btn btn-secondary metronome-button'
+                data-change='-5'>-5</button>
+            <button data-id='tempo-change' type='button' class='btn btn-light metronome-button'
+                data-change='-1'>-</button>
+
+            <div class='tempo-container'>
+                <div id='tempo' class='number-metronome'>120</div>
+                <div class='subtext-metronome'>bpm</div>
+            </div>
+
+            <button data-id='tempo-change' type='button' class='btn btn-light metronome-button'
+                data-change='+1'>+</button>
+            <button data-id='tempo-change' type='button' class='btn btn-secondary metronome-button'
+                data-change='+5'>+5</button>
+        </div>
+        <div class='metronome-controls'>
+            <button data-id='beatsperbar-change' type='button' class='btn btn-light metronome-button'
+                data-change='-1'>-</button>
+            <div class='bar-container'>
+                <div id='beatsperbar' class='number-metronome'>4</div>
+                <div class='subtext-metronome'>&nbsp;beats / bar</div>
+            </div>
+            <button data-id='beatsperbar-change' type='button' class='btn btn-light metronome-button'
+                data-change='+1'>+</button>
+        </div>
+        <div class='metronome-controls'>
+            <div class='tempo-container'>
+                <label class='subtext-metronome' for='notedurationselectable'>Note value:&nbsp;</label>
+                <span id='noteMusicSymbol' class='music-symbols'>
+                    &#xE1D3;
+                </span>
+                <select class='custom-select' id='notedurationselectable'>
+                    <option value='1'>1 = Whole note (semibreve)</option>
+                    <option value='2'>2 = Minim</option>
+                    <option value='4' selected>4 = Crotchet</option>
+                    <option value='8'>8 = Quaver</option>
+                    <option value='16'>16 = Semi-Quaver</option>
+                </select>
+            </div>
+        </div>
+        <div class='metronome-controls'>
+            <div class='subtext-metronome'>Time signature: <span id='topnumbersignature'>4</span>/<span
+                id='bottomnumbersignature'>4</span></div>
+        </div>
+    </main>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="text-muted">
+                Inspired by <a
+                    href="https://grantjam.es/creating-a-simple-metronome-using-javascript-and-the-web-audio-api/"
+                    target="_blank">Grant James</a>
+            </div>
+        </div>
+      </footer>
+</body>
+
+</html>
