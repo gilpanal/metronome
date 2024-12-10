@@ -2,10 +2,8 @@
   "name": "metronome",
   "version": "1.0.0",
   "description": "A simple metronome written using Javascript and the Web Audio API.",
-  "main": "metronome.js",
   "scripts": {
-    "start":"vite",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"vite"
   },
   "repository": {
     "type": "git",
