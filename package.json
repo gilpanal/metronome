@@ -1,0 +1,24 @@
+{
+  "name": "metronome",
+  "version": "1.0.0",
+  "description": "A simple metronome written using Javascript and the Web Audio API.",
+  "main": "metronome.js",
+  "scripts": {
+    "start":"vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilpanal/metronome.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gilpanal/metronome/issues"
+  },
+  "homepage": "https://github.com/gilpanal/metronome#readme",
+  "devDependencies": {
+    "vite": "^6.0.3"
+  }
+}
