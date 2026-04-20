@@ -91,6 +91,9 @@ The application is split into three files with clear, non-overlapping responsibi
 
 ```
 metronome/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # CI: build and deploy to GitHub Pages on push to master
 ├── src/                        # Vite root — all source assets live here
 │   ├── index.html              # Single-page app entry point
 │   ├── style.css               # Minimal custom styles
@@ -226,7 +229,8 @@ Open [http://localhost:8080/metronome/](http://localhost:8080/metronome/) in a b
 | `npm start` | Start Vite dev server at `localhost:8080` with HMR |
 | `npm run build` | Production build — outputs hashed assets to `dist/` |
 | `npm run preview` | Serve the production build locally for final verification |
-| `npm run deploy` | Build then push `dist/` to the `gh-pages` branch |
+
+Deployment is automated via GitHub Actions — pushing to `master` triggers the workflow at `.github/workflows/deploy.yml`, which builds the project and publishes it to GitHub Pages.
 
 ### How Vite handles the Web Worker
 
