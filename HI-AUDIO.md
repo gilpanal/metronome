@@ -166,7 +166,7 @@ This keeps the internal beat counter advancing (so re-enabling stays in phase) w
 
 ### UI logic is duplicated, not shared
 
-`metronomehandler.js` replicates most of the UI-layer behavior from the standalone `app.js`: tempo controls, beats-per-bar controls, note duration controls, icon animation, and the activation toggle. The audio engine (`metronome.js`) is shared conceptually, but the UI wiring is maintained as a separate copy.
+`metronomehandler.js` replicates most of the UI-layer behavior from the standalone `app.js`: tempo controls, beats-per-bar controls, note duration controls, icon animation, and the activation toggle. The audio engine (`metronome.js`) is mirrored line-for-line and kept in sync manually, but the UI wiring is maintained as a separate copy.
 
 Practical consequence: behavior fixes or UI changes in the standalone repo must be manually applied downstream in Hi-Audio.
 
