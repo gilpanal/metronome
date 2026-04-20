@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/gilpanal/metronome/issues"
   },
-  "homepage": "https://github.com/gilpanal/metronome#readme",
+  "homepage": "https://github.com/gilpanal/metronome/",
   "devDependencies": {
     "vite": "^6.0.3"
   }
